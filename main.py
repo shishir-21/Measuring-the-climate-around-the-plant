@@ -48,7 +48,7 @@ def write_data(sensor_data, moisture):
         writer.writerow({"Date": sensor_data[0], "Temp": sensor_data[1], "Humidity": sensor_data[2], "Moisture": str(moisture)})
 
 try:
-    num_photos = 100  # Define the number of photos to capture
+    num_photos = 1000000  # Define the number of photos to capture
     base_string = "photo"  # Define the base string for file names
 
     # Loop for capturing photos and logging sensor data
@@ -66,7 +66,7 @@ try:
         os.system(f"libcamera-still -o ../Pictures/{file_name} -t 10")
 
         # Add a delay between captures
-        time.sleep(2)  # Adjust delay time as needed
+        time.sleep(60)  # Adjust delay time as needed
 
 except KeyboardInterrupt:
     print("Exiting...")
