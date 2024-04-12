@@ -56,7 +56,7 @@ def write_data(sensor_data, moisture):
         writer.writerow({"Date": sensor_data[0], "Temp": sensor_data[1], "Humidity": sensor_data[2], "Moisture": str(moisture)})
 
 try:
-    num_photos = 1000000 # Define the number of photos to capture
+    num_photos = 100000  # Define the number of photos to capture
     base_string = "photo"  # Define the base string for file names
 
     # Loop for capturing photos and logging sensor data
